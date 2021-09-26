@@ -1,0 +1,11 @@
+.companyName{
+  font-size: 110%;
+}
+
+.mat-toolbar{
+  height: 7vh;
+}
+
+div {
+  overflow: inherit;
+}

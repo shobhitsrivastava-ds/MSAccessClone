@@ -1,0 +1,21 @@
+<div>
+  <mat-toolbar color="warn">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyName" routerLink="/">
+      <span>Db Access</span>
+    </a>
+    <div fxHide.lt-md="true">
+      <a mat-button routerLink="/about-us">File</a>
+      <a mat-button routerLink="/prices">View</a>
+      <a mat-button routerLink="/prices">Edit</a>
+      <a mat-button routerLink="/prices">Connection</a>
+    </div>
+
+
+  </mat-toolbar>
+</div>
