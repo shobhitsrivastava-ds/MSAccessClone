@@ -6,7 +6,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class DataServiceService {
 
-  _url= ''
+  _url= 'localhost:8080/graphql'
   constructor(private _http: HttpClient) { }
 
   enroll(data: string[]) {

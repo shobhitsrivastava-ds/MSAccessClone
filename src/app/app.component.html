@@ -22,12 +22,11 @@
                        [(ngModel)]="option.checked"/>
                 {{option.name}}
               </div>
-              <button (click)="addColumns(d.id)">Info</button><button (click)="submit(d.id)">Submit</button>
+              <button (click)="addColumns(d.id)">Expand</button><button (click)="submit(d.id)">Submit</button>
             </form>
           </div>
         </div>
       </div>
-
 
         <div class="box-list" cdkDropList (cdkDropListDropped)="dropArea($event)" [cdkDropListData]="desc">
           <div class="example-box" *ngFor="let d of desc" cdkDrag>
@@ -55,7 +54,7 @@
           <th style="width: 100px">Value</th>
           <th style="width: 100px">GroupBy</th>
           <th style="width:100px">Condition</th>
-          <th style="width: 100px">Others</th>
+          <th style="width: 100px">Sort</th>
         </tr>
         </thead>
       </table>
@@ -63,7 +62,8 @@
 
 
     <div class="table">
-      <form class="add-row1">
+      <form class="add-row1" id="form1" >
+<!--      <form [formGroup]="myFormGroup" (ngSubmit)="onSubmit(callform.value)" #callform="ngForm"-->
       </form>
     </div>
     </div>
@@ -77,69 +77,61 @@
             <th style="width: 100px">Value</th>
             <th style="width: 100px">GroupBy</th>
             <th style="width:100px">Condition</th>
-            <th style="width: 100px">Others</th>
+            <th style="width: 100px">Sort</th>
           </tr>
           </thead>
         </table>
       </div>
 
       <div class="table">
-        <form class="add-row2">
+        <form class="add-row2" id="form2">
         </form>
       </div>
     </div>
-
+  </div>
   </div>
 
-  </div>
 
 
-<!--  <app-list-drag></app-list-drag>-->
-<!--  <div class="form-group">-->
-<!--    <div *ngFor="let options of totalOptions">-->
-<!--      <form ngForm (ngSubmit)="submit()">-->
-<!--        <div *ngFor="let option of options">-->
-<!--          <input type="checkbox"-->
-<!--               name="options"-->
-<!--               value="{{option.value}}"-->
-<!--               [(ngModel)]="option.checked"/>-->
-<!--               {{option.name}}-->
-<!--        </div>-->
-<!--        <button>Submit</button>-->
-<!--      </form>-->
-<!--    </div>-->
-<!--  </div>-->
+
+<!--CLAIM{-->
+<!--claimId,-->
+<!--Provider,-->
+<!--Patient-->
+<!--ClaimAmount,-->
+<!--//Services-->
+<!--status-->
+<!--}-->
+
+<!--PATIENT{-->
+<!--PatientName,-->
+<!--//[CLAIMS]-->
+<!--TotalClaimAmount-->
+<!--PatientPostalCode-->
+<!--}-->
+
+<!--PROVIDER{-->
+<!--ProviderName,-->
+<!--ProvidersOrganization-->
+<!--ProviderLastOrganization,-->
+<!--LicenseNumber,-->
+<!--ProviderTotalWorkExp,-->
+<!--//claimsFiled: [CLAIMS]-->
+<!--}-->
 
 
-<!--&lt;!&ndash;<div class="example-box" cdkDrag>&ndash;&gt;-->
-<!--&lt;!&ndash;  Drag me around&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-<!--&lt;!&ndash;<button mat-raised-button cdkDrag>Click Me!</button>&ndash;&gt;-->
 
-<!--<div class="container">-->
 
-<!--  <div>-->
-<!--    <ul class="query-area">-->
-<!--    </ul>-->
-<!--  </div>-->
 
-<!--    <div cdkDropListGroup>-->
-<!--      <ul class="drop-area" cdkDropList [cdkDropListData]="movies1" (cdkDropListDropped)="dropArea($event)" >-->
-<!--      <li class="example-box resize-box" *ngFor="let m of movies1" cdkDrag>-->
-<!--        {{ m }}-->
-<!--      </li>-->
-<!--      </ul>-->
 
-<!--      <div class= "drop-box-shift">-->
-<!--        <div class="example-list" cdkDropList (cdkDropListDropped)="dropArea($event)" [cdkDropListData]="movies">-->
-<!--          <div class="example-box" *ngFor="let movie of movies" cdkDrag>-->
-<!--            {{movie}}-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--</div>-->
+
+
+
+
+
+
+
 
 
 
